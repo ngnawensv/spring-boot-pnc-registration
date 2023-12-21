@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+---
+api:
+  base: ${IP_API:http://ip-api.com/json}
+
+---
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: pncdb
+
+---
+spring-doc:
+  api-docs:
+    path: /spring-boot-pnc-registration/api-docs
+  swagger-ui:
+    filter: 'true'
+    urls-primary-name: spring-boot-pnc-registration Service Open Api Swagger
+    try-it-out-enabled: 'true'
