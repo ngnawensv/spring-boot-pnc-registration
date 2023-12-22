@@ -19,6 +19,7 @@ public class UserController {
         this.userService = userService;
     }
 
+    //@Valid annotation is used to validate incoming request
     @PostMapping("/fetch")
     public ResponseEntity<UserResponse> getDate(@RequestBody @Valid UserDto userDto){
         var response =userService.getData(userDto);

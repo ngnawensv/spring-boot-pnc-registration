@@ -20,16 +20,16 @@ import java.util.UUID;
 @Slf4j
 public class UserServiceImpl implements UserService {
     private final WebClient ipApiWebClient;
-    private  final AppConfig appConfig;
+    private final AppConfig appConfig;
 
-    public UserServiceImpl(@Qualifier("ipApiWebClient")WebClient ipApiWebClient, AppConfig appConfig) {
+    public UserServiceImpl(@Qualifier("ipApiWebClient") WebClient ipApiWebClient, AppConfig appConfig) {
         this.ipApiWebClient = ipApiWebClient;
         this.appConfig = appConfig;
     }
 
     @Override
     public UserResponse getData(UserDto userDto) {
-        var response = ipApiWebClient.get()
+       /* var response = ipApiWebClient.get()
                 .uri(uriBuilder -> uriBuilder
                         .path(appConfig.getIpApiBaseUrl()+"/"+userDto.getIpAddress())
                         .build())
@@ -44,5 +44,9 @@ public class UserServiceImpl implements UserService {
         return UserResponse.builder()
                 .id(UUID.randomUUID().toString())
                 .message(String.format("Welcome %s in this %s", userDto.getUsername(), response.getCity())).build();
+     */
+        return UserResponse.builder()
+                .id(UUID.randomUUID().toString())
+                .message(String.format("Welcome %s in this %s", userDto.getUsername(), "")).build();
     }
 }
