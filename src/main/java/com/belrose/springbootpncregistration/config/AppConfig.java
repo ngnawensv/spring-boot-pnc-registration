@@ -13,7 +13,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Getter
 public class AppConfig {
 
-    @Value("${api.base}")
+    @Value("${ip-api.base}")
     private String ipApiBaseUrl;
 
 

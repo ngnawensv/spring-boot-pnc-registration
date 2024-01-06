@@ -26,7 +26,8 @@ public class UserController {
         return ResponseEntity.ok(response);
     }  
 
-4.	Add the validation contraints on your model   
+4.	Add the validation contraints on your model  
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

@@ -1,7 +1,6 @@
 package com.belrose.springbootpncregistration.controller;
 
 import com.belrose.springbootpncregistration.dto.UserDto;
-import com.belrose.springbootpncregistration.model.UserResponse;
 import com.belrose.springbootpncregistration.service.UserService;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
@@ -20,8 +19,8 @@ public class UserController {
     }
 
     //@Valid annotation is used to validate incoming request
-    @PostMapping("/fetch")
-    public ResponseEntity<UserResponse> getDate(@RequestBody @Valid UserDto userDto){
+    @PostMapping("/ipAddress")
+    public ResponseEntity<String> getDate(@RequestBody @Valid UserDto userDto){
         var response =userService.getData(userDto);
         log.info("UserController->getDate():response {}",response);
         return ResponseEntity.ok(response);

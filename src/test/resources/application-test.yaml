@@ -1,9 +1,9 @@
 server:
-  port: 8080
+  port: 9000
 
 ---
 ip-api:
-  base: http://ip-api.com/json/
+  base: http://localhost:${server.port}/
 
 ---
 
