@@ -70,3 +70,5 @@ public class ApiExceptionHandler {
     }
 }
 
+6. Downstream API
+   https://ip-api.com/docs/api:json
